@@ -1,5 +1,6 @@
+import React, { useEffect, useRef } from 'react';
 import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/hero-img.png';
+import heroImg from '../../assets/aphole-img.png';
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 import githubLight from '../../assets/github-light.svg';
@@ -15,8 +16,35 @@ function Hero() {
   const githubIcon = theme === 'light' ? githubLight : githubDark;
   const linkedinIcon = theme === 'light' ? linkedinLight : linkedinDark;
 
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add(styles.animate);
+          } else {
+            entry.target.classList.remove(styles.animate);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section id="hero" className={styles.container}>
+    <section id="hero" className={styles.container} ref={containerRef}>
       <div className={styles.colorModeContainer}>
         <img
           src={heroImg}

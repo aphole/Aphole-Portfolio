@@ -7,6 +7,7 @@
   --form-text-color: #555;
   --footer-text-color: #888;
   --footer-top-border:#bbb;
+  --hero-shadow: #0000004D;
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
   --form-text-color: #fff;
   --footer-text-color: #bbb;
   --footer-top-border:#fff;
+  --hero-shadow: #fc89eb65;
 }
 
 body {

@@ -1,0 +1,54 @@
+/* NavbarStyles.module.css */
+.navbar {
+    background-color: var(--background-color);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navList {
+    display: flex;
+    justify-content: flex-end; /* Align nav items to the right */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 50px;
+    font-family: "Roboto Mono", monospace;
+  }
+  
+  .navItem {
+    margin-left: 10px; /* Adjust spacing between nav items */
+  }
+  
+  .navItem a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+    transition: color 0.3s;
+    position: relative; /* Add position relative to the anchor */
+  }
+  
+  .navItem a:hover {
+    color: rgb(255, 0, 144);
+  }
+  
+  .navItem a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px; /* Adjust the height of the line as needed */
+    background-color: #fc6ebc; /* Set the color of the line */
+    transform: scaleX(0); /* Initially scale the line to 0 width */
+    transition: transform 0.3s ease; /* Add transition effect */
+  }
+  
+  .navItem a:hover::after {
+    transform: scaleX(1); /* Scale the line to full width on hover */
+  }
+  
