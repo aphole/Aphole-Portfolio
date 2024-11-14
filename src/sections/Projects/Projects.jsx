@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
-import freshBurger from '../../assets/fresh-burger.png';
-import hipsster from '../../assets/hipsster.png';
-import fitLift from '../../assets/fitlift.png';
+import qbyte from '../../assets/qbyte.png';
+import sendcrypt from '../../assets/sendcrypt.jpg'
+import doorlock from '../../assets/doorlock.jpg'
 import ProjectCard from '../../theme/ProjectCard';
 
 function Projects() {
@@ -50,34 +49,24 @@ function Projects() {
       <div className={styles.projectsContainer}>
         <div className={styles.projectCard}>
           <ProjectCard
-            src={viberr}
-            link="https://github.com/Ade-mir/company-landing-page-2"
-            h3="Viberr"
-            p="Streaming App"
+            src={doorlock}
+            link="https://appdistribution.firebase.dev/i/976a50422c50a99c"
+            h3="QByte"
+            height="250px"
+            width="150px"
+            p="Door Lock App"
+            status="Status: On-going Project"
           />
         </div>
         <div className={styles.projectCard}>
           <ProjectCard
-            src={freshBurger}
-            link="https://github.com/Ade-mir/company-landing-page-2"
-            h3="Fresh Burger"
-            p="Hamburger Restaurant"
-          />
-        </div>
-        <div className={styles.projectCard}>
-          <ProjectCard
-            src={hipsster}
-            link="https://github.com/Ade-mir/company-landing-page-2"
-            h3="Hipsster"
-            p="Glasses Shop"
-          />
-        </div>
-        <div className={styles.projectCard}>
-          <ProjectCard
-            src={fitLift}
-            link="https://github.com/Ade-mir/company-landing-page-2"
-            h3="FitLift"
-            p="Fitness App"
+            src={sendcrypt}
+            link="https://sendcrypt.netlify.app"
+            h3="SendCrypt"
+            height="250px"
+            width="150px"
+            p="Crypto currency"
+            status="Status: On-going Project"
           />
         </div>
       </div>

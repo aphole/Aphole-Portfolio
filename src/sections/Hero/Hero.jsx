@@ -7,7 +7,7 @@ import githubLight from '../../assets/github-light.svg';
 import githubDark from '../../assets/github-dark.svg';
 import linkedinLight from '../../assets/linkedin-light.svg';
 import linkedinDark from '../../assets/linkedin-dark.svg';
-import CV from '../../assets/cv.pdf';
+import CV from '../../assets/Soriano_Resume.pdf';
 import { useTheme } from '../../theme/ThemeContext';
 
 function Hero() {
@@ -64,7 +64,6 @@ function Hero() {
           <br />
           Soriano
         </h1>
-        <h2>Frontend Developer</h2>
         <span>
           <a href="https://github.com/" target="_blank">
             <img src={githubIcon} alt="Github icon" />
