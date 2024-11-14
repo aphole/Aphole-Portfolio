@@ -65,10 +65,10 @@ function Hero() {
           Soriano
         </h1>
         <span>
-          <a href="https://github.com/" target="_blank">
+          <a href="https://github.com/aphole" target="_blank">
             <img src={githubIcon} alt="Github icon" />
           </a>
-          <a href="https://linkedin.com/" target="_blank">
+          <a href="https://www.linkedin.com/in/aphole-soriano-5aa2a5293/?trk=opento_sprofile_details" target="_blank">
             <img src={linkedinIcon} alt="Linkedin icon" />
           </a>
         </span>
